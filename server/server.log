@@ -1,0 +1,40 @@
+[2020-04-28 13:58:10 ^14402.8]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Class 'Chat' not found in /data/wwwroot/default/server/classes/hsw.class.php:190
+Stack trace:
+#0 [internal function]: hsw->onTask(Object(Swoole\WebSocket\Server), 0, 1, Array)
+#1 /data/wwwroot/default/server/classes/hsw.class.php(42): Swoole\Server->start()
+#2 /data/wwwroot/default/server/hsw_server.php(17): hsw->__construct()
+#3 {main}
+  thrown in /data/wwwroot/default/server/classes/hsw.class.php on line 190
+[2020-04-28 13:58:10 $14393.0]	WARNING	swManager_check_exit_status: worker#8[pid=14402] abnormal exit, status=255, signal=0
+[2020-04-28 16:58:05 ^20775.9]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Error: Call to undefined method ConnectMysqli::query_sql() in /data/wwwroot/default/server/classes/Chat.class.php:47
+Stack trace:
+#0 /data/wwwroot/default/server/classes/Chat.class.php(464): Chat::login(Array)
+#1 /data/wwwroot/default/server/classes/hsw.class.php(194): Chat::doLogin(Array)
+#2 [internal function]: hsw->onTask(Object(Swoole\WebSocket\Server), 1, 1, Array)
+#3 /data/wwwroot/default/server/classes/hsw.class.php(42): Swoole\Server->start()
+#4 /data/wwwroot/default/server/hsw_server.php(17): hsw->__construct()
+#5 {main}
+  thrown in /data/wwwroot/default/server/classes/Chat.class.php on line 47
+[2020-04-28 16:58:05 $20765.0]	WARNING	swManager_check_exit_status: worker#9[pid=20775] abnormal exit, status=255, signal=0
+[2020-04-28 17:23:42 ^20968.9]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/wwwroot/default/server/classes/db_class.php:148
+Stack trace:
+#0 /data/wwwroot/default/server/classes/Chat.class.php(49): ConnectMysqli->insert('chat_user', Array)
+#1 /data/wwwroot/default/server/classes/Chat.class.php(467): Chat::login(Array)
+#2 /data/wwwroot/default/server/classes/hsw.class.php(194): Chat::doLogin(Array)
+#3 [internal function]: hsw->onTask(Object(Swoole\WebSocket\Server), 1, 1, Array)
+#4 /data/wwwroot/default/server/classes/hsw.class.php(42): Swoole\Server->start()
+#5 /data/wwwroot/default/server/hsw_server.php(17): hsw->__construct()
+#6 {main}
+  thrown in /data/wwwroot/default/server/classes/db_class.php on line 148
+[2020-04-28 17:23:42 $20958.0]	WARNING	swManager_check_exit_status: worker#9[pid=20968] abnormal exit, status=255, signal=0
+[2020-04-28 17:24:21 ^21023.9]	ERROR	php_swoole_server_rshutdown (ERRNO 503): Fatal error: Uncaught Swoole\ExitException: swoole exit in /data/wwwroot/default/server/classes/db_class.php:148
+Stack trace:
+#0 /data/wwwroot/default/server/classes/Chat.class.php(48): ConnectMysqli->insert('chat_user', Array)
+#1 /data/wwwroot/default/server/classes/Chat.class.php(466): Chat::login(Array)
+#2 /data/wwwroot/default/server/classes/hsw.class.php(194): Chat::doLogin(Array)
+#3 [internal function]: hsw->onTask(Object(Swoole\WebSocket\Server), 1, 1, Array)
+#4 /data/wwwroot/default/server/classes/hsw.class.php(42): Swoole\Server->start()
+#5 /data/wwwroot/default/server/hsw_server.php(17): hsw->__construct()
+#6 {main}
+  thrown in /data/wwwroot/default/server/classes/db_class.php on line 148
+[2020-04-28 17:24:21 $21013.0]	WARNING	swManager_check_exit_status: worker#9[pid=21023] abnormal exit, status=255, signal=0
